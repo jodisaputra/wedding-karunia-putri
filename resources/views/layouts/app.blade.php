@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{{ asset('css/fontawesome.min.css') }}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('css/adminlte.min.css') }}">
-    @yield('styles')
+    @stack('styles')
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -67,6 +67,7 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
+        @include('sweetalert::alert')
         @yield('content')
     </div>
     <!-- /.content-wrapper -->
@@ -98,7 +99,7 @@
 @vite('resources/js/app.js')
 <!-- AdminLTE App -->
 <script src="{{ asset('js/adminlte.min.js') }}" defer></script>
-
-@yield('scripts')
+<script src="{{ asset('js/jquery-3.7.1.js')  }}"></script>
+@stack('scripts')
 </body>
 </html>

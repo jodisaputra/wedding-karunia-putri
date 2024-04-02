@@ -30,6 +30,15 @@
             </li>
 
             <li class="nav-item">
+                <a href="{{ route('stories.index') }}" class="nav-link {{ (request()->is('stories*')) ? 'active' : '' }}">
+                    <i class="nav-icon fas fa-book-open"></i>
+                    <p>
+                        {{ __('Stories') }}
+                    </p>
+                </a>
+            </li>
+
+            <li class="nav-item">
                 <a href="{{ route('about') }}" class="nav-link">
                     <i class="nav-icon far fa-address-card"></i>
                     <p>
