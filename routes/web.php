@@ -28,6 +28,12 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('stories', \App\Http\Controllers\StoryController::class);
 
+    Route::get('sliders', [\App\Http\Controllers\SliderController::class, 'index'])->name('sliders.index');
+    Route::get('sliders/create', [\App\Http\Controllers\SliderController::class, 'create'])->name('sliders.create');
+    Route::post('sliders/store', [\App\Http\Controllers\SliderController::class, 'store'])->name('sliders.store');
+    Route::delete('sliders/{slider}', [\App\Http\Controllers\SliderController::class, 'destroy'])->name('sliders.destroy');
+
+
     Route::get('profile', [\App\Http\Controllers\ProfileController::class, 'show'])->name('profile.show');
     Route::put('profile', [\App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');
 });

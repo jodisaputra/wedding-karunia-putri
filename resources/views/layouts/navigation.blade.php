@@ -39,6 +39,15 @@
             </li>
 
             <li class="nav-item">
+                <a href="{{ route('sliders.index') }}" class="nav-link {{ (request()->is('sliders*')) ? 'active' : '' }}">
+                    <i class="nav-icon fas fa-book-open"></i>
+                    <p>
+                        {{ __('Sliders') }}
+                    </p>
+                </a>
+            </li>
+
+            <li class="nav-item">
                 <a href="{{ route('about') }}" class="nav-link">
                     <i class="nav-icon far fa-address-card"></i>
                     <p>
