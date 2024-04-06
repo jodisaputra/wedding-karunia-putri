@@ -40,6 +40,9 @@ Route::middleware('auth')->group(function () {
     Route::post('galleries/store', [\App\Http\Controllers\GalleryController::class, 'store'])->name('galleries.store');
     Route::delete('galleries/{gallery}', [\App\Http\Controllers\GalleryController::class, 'destroy'])->name('galleries.destroy');
 
+    //event
+    Route::resource('events', \App\Http\Controllers\EventController::class);
+
 
     Route::get('profile', [\App\Http\Controllers\ProfileController::class, 'show'])->name('profile.show');
     Route::put('profile', [\App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');

@@ -57,6 +57,15 @@
             </li>
 
             <li class="nav-item">
+                <a href="{{ route('events.index') }}" class="nav-link {{ (request()->is('events*')) ? 'active' : '' }}">
+                    <i class="nav-icon fas fa-calendar"></i>
+                    <p>
+                        {{ __('Events') }}
+                    </p>
+                </a>
+            </li>
+
+            <li class="nav-item">
                 <a href="{{ route('about') }}" class="nav-link {{ (request()->is('about*')) ? 'active' : '' }}">
                     <i class="nav-icon far fa-address-card"></i>
                     <p>
