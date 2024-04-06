@@ -28,10 +28,17 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('stories', \App\Http\Controllers\StoryController::class);
 
+    //sliders
     Route::get('sliders', [\App\Http\Controllers\SliderController::class, 'index'])->name('sliders.index');
     Route::get('sliders/create', [\App\Http\Controllers\SliderController::class, 'create'])->name('sliders.create');
     Route::post('sliders/store', [\App\Http\Controllers\SliderController::class, 'store'])->name('sliders.store');
     Route::delete('sliders/{slider}', [\App\Http\Controllers\SliderController::class, 'destroy'])->name('sliders.destroy');
+
+    //galleries
+    Route::get('galleries', [\App\Http\Controllers\GalleryController::class, 'index'])->name('galleries.index');
+    Route::get('galleries/create', [\App\Http\Controllers\GalleryController::class, 'create'])->name('galleries.create');
+    Route::post('galleries/store', [\App\Http\Controllers\GalleryController::class, 'store'])->name('galleries.store');
+    Route::delete('galleries/{gallery}', [\App\Http\Controllers\GalleryController::class, 'destroy'])->name('galleries.destroy');
 
 
     Route::get('profile', [\App\Http\Controllers\ProfileController::class, 'show'])->name('profile.show');

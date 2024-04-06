@@ -40,7 +40,7 @@
 
             <li class="nav-item">
                 <a href="{{ route('sliders.index') }}" class="nav-link {{ (request()->is('sliders*')) ? 'active' : '' }}">
-                    <i class="nav-icon fas fa-book-open"></i>
+                    <i class="nav-icon fas fa-images"></i>
                     <p>
                         {{ __('Sliders') }}
                     </p>
@@ -48,7 +48,16 @@
             </li>
 
             <li class="nav-item">
-                <a href="{{ route('about') }}" class="nav-link">
+                <a href="{{ route('galleries.index') }}" class="nav-link {{ (request()->is('galleries*')) ? 'active' : '' }}">
+                    <i class="nav-icon fas fa-images"></i>
+                    <p>
+                        {{ __('Galleries') }}
+                    </p>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="{{ route('about') }}" class="nav-link {{ (request()->is('about*')) ? 'active' : '' }}">
                     <i class="nav-icon far fa-address-card"></i>
                     <p>
                         {{ __('About us') }}
